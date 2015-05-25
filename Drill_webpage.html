@@ -1,0 +1,110 @@
+<!DOCTYPE html >
+<html>
+
+<head>
+
+
+
+		<link rel="stylesheet" href="Drill_webpageCSS.css" type="text/css"  media="all">
+	
+
+	
+</head>
+
+
+
+<body>
+	<a name="Top">
+		
+<header>
+
+  <hgroup>
+    <h1>The Tech Academy</h1>
+    <h2>HTML5 and CSS3</h2>
+  </hgroup>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+</header>
+
+<br>
+
+<section>
+<p>HTML (the Hypertext Markup Language) and CSS (Cascading Style Sheets) are two of the core technologies for building Web pages. HTML provides the structure of the page, CSS the (visual and aural) layout, for a variety of devices. Along with graphics and scripting, HTML and CSS are the basis of building Web pages and Web Applications.</p>
+</section>
+
+
+<section>
+<h1>How Web Browsers Parse HTML</h1>
+
+<p>One final topic I want to talk about that affects modern web development is the implementations of various web browsers.  As you'll recall, once the requested web page has been returned, it will be parsed by a web browser then displayed on screen.</p>
+
+<p>There are four major parsing and rendering engines that are popular today.</p>
+
+<ul>
+<li>Trident, the web browser engine from Internet Explorer, is used by many applications on the Microsoft Windows platform, such as netSmart, Outlook Express, some versions of Microsoft Outlook, and the mini-browsers in Winamp and RealPlayer.</li>
+
+<li>KDE's open-source KHTML engine is used in KDE's Konqueror web browser and was the basis for WebKit, the rendering engine in Apple's Safari and Google's Chrome web browsers.</li>
+
+<li>Gecko, the Mozilla project's open-source web browser engine, is used by a variety of products derived from the Mozilla code base, including the Firefox web browser, the Thunderbird e-mail client, and SeaMonkey internet suite.</li>
+
+<li>Opera Software's proprietary Presto engine is licensed to a number of other software vendors, and is used in Opera's own web browser.</li>
+</ul>
+
+<p>They are *mostly* the same, in so much that a web page will look mostly the same regardless of which web browser it is loaded into.  However it is the differences between them that most people discuss because it provides design challenges.</p>
+
+<h2>What do I mean when I use the terms "parse" and "render"?</h2>
+
+<figure>
+  <img src="www-diagram.gif" alt="A diagram of route from the user request to the web server and back again">
+  <figcaption>Figure 1. (1) The HTTP Request is (2) routed across the internet to the (3) server which serves the (4) requested file back in the body of an HTTP Response message. (5) The HTTP Response is routed across the internet to the original requestor.  (6) The requested file is parsed and displayed in the user's web browser.
+</figcaption>
+</figure
+
+
+<p>The term "parse" refers to the process of breaking apart the HTML document to better "understand" the instructions coded there in.  During this phase, other resources, like external CSS files or JavaScript files, or images, must be requested so that the browser can get a complete picture of the code it is responsible for ultimately rendering.  After all those external resources are downloaded and analyzed, they are typically loaded into the computer's memory as a tree, or hierarchy, of software objects then passed to the rendering engine component of the browser - more about that in a moment.  When I refer to these hierarchical software objects, I simply mean that some objects "own" or are parents to other objects ... a simple example might be that a paragraph is a parent to each sentence, which is a parent to each word.  There might be other tags and graphical elements that the paragraph owns as well.  This is simply part of the process of deciding what technique the browser will use to ultimately render the HTML to the screen.</p>
+
+<h2>Characteristics of HTML5 Web Pages</h2>
+
+<p>Each web page should declare which standard it has promised to adhere to.  This is called a DOCTYPE, and it is the reason that we typed this:<br>
+<br>
+&lt;!DOCTYPE html&gt; <a href="http://en.wikipedia.org/wiki/Document_type_declaration" target="_blank">"For more information clich here." </a>
+<br>
+<br>
+... at the very top of our web page.  This instruction told any web browser that may open it that it should be evaluated as an HTML5 document, as opposed to an HTML document of another version.  Every instruction should adhere to the HTML5 specification (which we'll talk about in a moment).  If it doesn't, the renderer may not know how to properly apply the rules of HTML5 to the document and must drop back into something called "quirks mode" where the browser will take a best guess on how to best render the web page.  "Quirks mode" exists because there are plenty of poorly coded HTML page in the world and the web browser wants to try to the best of its ability to render something to the end user.  If web browsers through up their hands and complained each time a web developer wrote bad code, the World Wide Web experience would be dreadful.  Since writing HTML that doesn't validate against a standard can produce inconsistent results, web developers are strongly encouraged to take great care in the code they write.  In fact, most tools that allow you to write HTML pages incorporate a validator to ensure the code you write validates against your chosen HTML specification.  We'll use an HTML5 validator that's available on the internet for free in just a moment.</p>
+</section>
+<br>
+
+
+
+<aside>If you have a captive audience, the experience is a little different.  For example, In Windows 8, HTML5 developers can rely on Internet Explorer 10's expanded HTML5 support to build user interfaces that run as Metro-style applications utilizing the WinRT API.  In this case, you know for a fact where your HTML5 will be rendered and by whom, and you are free to use the full set of HTML5 features IE10 supports without having to worry about other browser vendors and version.  Another example might be that someday you're building web-based intranet applications that will run inside of your enterprise on an Intranet.  In this case, your IT department may have standardized on a specific web browser.  If this is the case, you are free to use the HTML features supported by that specific vendor and version of web browser.</aside>
+
+
+<nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  
+  
+
+<br><br><br>
+<footer> 
+	
+	The Tech Academy © 2015 Copyright
+	
+</footer>
+
+  <p><a href="#Top">To Top</a></p>
+
+</body>
+
+</html>
